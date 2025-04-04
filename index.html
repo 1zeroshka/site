@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Minecraft Server</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -14,7 +14,7 @@
 
     body {
       font-family: 'Open Sans', sans-serif;
-      background: url('https://imgur.com/a/7Ct04uG') no-repeat center center fixed;
+      background: url('img/2025-03-02_01.21.00.png') no-repeat center center fixed;
       background-size: cover;
       color: white;
       min-height: 100vh;
@@ -53,8 +53,9 @@
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 36px;
       margin-bottom: 20px;
+      text-shadow: 2px 2px #000;
     }
 
     .subtitle {
@@ -62,6 +63,7 @@
       max-width: 600px;
       margin: 0 auto 30px auto;
       line-height: 1.5;
+      text-shadow: 1px 1px #000;
     }
 
     .ip-button {
@@ -73,6 +75,12 @@
       color: white;
       font-weight: bold;
       cursor: pointer;
+      box-shadow: 0 4px #1a3b1a;
+    }
+
+    .ip-button:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px #1a3b1a;
     }
 
     .features {
@@ -93,6 +101,11 @@
 
     .feature-box h3 {
       margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .feature-box img {
+      width: 40px;
       margin-bottom: 10px;
     }
 
@@ -122,17 +135,17 @@
 
     <div class="features">
       <div class="feature-box">
-        <img src="https://i.imgur.com/7sY9H2k.png" alt="block" width="40" />
+        <img src="img/spell-book.png" alt="Feature Icon" />
         <h3>FEATURES</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
       </div>
       <div class="feature-box">
-        <img src="https://i.imgur.com/FvZVFaQ.png" alt="heart" width="40" />
+        <img src="img/spell-book.png" alt="Donate Icon" />
         <h3>DONATE</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
       </div>
       <div class="feature-box">
-        <img src="https://i.imgur.com/fjNTnTw.png" alt="group" width="40" />
+        <img src="img/spell-book.png" alt="Community Icon" />
         <h3>COMMUNITY</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
       </div>
@@ -146,7 +159,7 @@
   <script>
     function copyIP() {
       navigator.clipboard.writeText("play.example.com").then(() => {
-        alert("IP copied to clipboard!");
+        alert("IP скопирован!");
       });
     }
   </script>
