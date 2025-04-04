@@ -1,0 +1,156 @@
+/* Основные стили */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0B020D;
+  color: #ffffff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background: #0B020D;
+  padding: 15px 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.gallery {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 500px; /* увеличенная высота под картинки */
+  margin: 60px 0;
+}
+
+.gallery-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 100%;
+}
+
+.gallery-item {
+  width: 800px; /* увеличенные размеры (в 2 раза больше исходного) */
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left-img {
+  left: -400px; /* картинки специально сдвинуты и частично за границами */
+}
+
+.center-img {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.right-img {
+  right: -400px; /* картинки специально сдвинуты и частично за границами */
+}
+
+}
+
+.center-img {
+  z-index: 2;
+}
+
+
+/* Подзаголовок */
+.subheading {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+/* Фишки проекта */
+.features {
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.feature-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.card {
+  background-color: #380C3B;
+  padding: 15px 20px;
+  border-radius: 15px;
+  width: 600px;
+  text-align: left;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+footer {
+  text-align: center;
+  margin: 50px 0 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 280px;
+    height: 180px;
+  }
+
+  .left-img {
+    left: -150px;
+  }
+
+  .right-img {
+    right: -150px;
+  }
+
+  nav a {
+    margin-left: 10px;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
