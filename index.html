@@ -1,34 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minecraft Server</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Press Start 2P', monospace;
+      background-image: url('https://i.imgur.com/c9rHg8F.jpg'); /* Майнкрафт фон */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      text-shadow: 2px 2px 0 #000;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-size: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .hero {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 14px;
+      background-color: #00aa00;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 4px #007700;
+    }
+
+    .hero button:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px #007700;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 10px;
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="logo">MinecraftServer</div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Features</a>
-      <a href="#">Donate</a>
-      <a href="#">Community</a>
+      <a href="#">HOME</a>
+      <a href="#">FEATURES</a>
+      <a href="#">DONATE</a>
+      <a href="#">COMMUNITY</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <h1>Welcome to Our Minecraft Server</h1>
+      <h1>WELCOME TO OUR MINECRAFT SERVER</h1>
       <p>IP: play.example.com</p>
-      <button onclick="copyIP()">Copy IP</button>
+      <button onclick="copyIP()">COPY IP</button>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 MinecraftServer. Not affiliated with Mojang.</p>
+    <p>Not affiliated with Mojang Studios</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    function copyIP() {
+      navigator.clipboard.writeText("play.example.com").then(() => {
+        alert("IP copied to clipboard!");
+      });
+    }
+  </script>
 </body>
 </html>
